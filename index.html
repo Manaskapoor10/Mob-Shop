@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSphere - E-Commerce Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style1.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">ShopSphere</div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="icons">
+            <button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+    
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Modern Shopping Experience</h1>
+        <p>Buy trending fashion, gadgets and lifestyle products with amazing deals.</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </div>
+</section>
+<h2 class="section-title" id="products">Featured Products</h2>
+
+<section class="products">
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop" alt="Shoes">
+        <div class="product-info">
+            <h3>Nike Air Shoes</h3>
+            <p>Comfortable premium sneakers for everyday use.</p>
+            <div class="price">₹4,999</div>
+            <button class="add-cart" onclick="addToCart('Nike Air Shoes', 4999)">Add to Cart</button>
+        </div>
+    </div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop" alt="Phone">
+    <div class="product-info">
+        <h3>Smartphone Pro</h3>
+        <p>Latest generation smartphone with AI features.</p>
+        <div class="price">₹69,999</div>
+        <button class="add-cart" onclick="addToCart('Smartphone Pro', 69999)">Add to Cart</button>
+    </div>
+</div>
+        
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop" alt="Watch">
+    <div class="product-info">
+        <h3>Luxury Watch</h3>
+        <p>Elegant smartwatch with fitness tracking.</p>
+        <div class="price">₹9,499</div>
+        <button class="add-cart" onclick="addToCart('Luxury Watch', 9499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Headphones">
+    <div class="product-info">
+        <h3>Wireless Headphones</h3>
+        <p>Noise cancellation with crystal clear sound.</p>
+        <div class="price">₹5,499</div>
+        <button class="add-cart" onclick="addToCart('Wireless Headphones', 5499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=1200&auto=format&fit=crop" alt="Smart Band">
+    <div class="product-info">
+        <h3>Smart Fitness Band</h3>
+        <p>Track your daily activities and health stats.</p>
+        <div class="price">₹2,999</div>
+        <button class="add-cart" onclick="addToCart('Smart Fitness Band', 2999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg" alt="Cotton hoodie">
+    <div class="product-info">
+        <h3>Casual Hoodie</h3>
+        <p>Comfortable cotton hoodie for everyday wear.</p>
+        <div class="price">₹799</div>
+        <button class="add-cart" onclick="addToCart('Casual T-Shirt', 799)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1200&auto=format&fit=crop" alt="Sneakers">
+    <div class="product-info">
+        <h3>Running Sneakers</h3>
+        <p>Lightweight shoes for running and sports.</p>
+        <div class="price">₹3,499</div>
+        <button class="add-cart" onclick="addToCart('Running Sneakers', 3499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?q=80&w=1200&auto=format&fit=crop" alt="Perfume">
+    <div class="product-info">
+        <h3>Luxury Perfume</h3>
+        <p>Long-lasting premium fragrance for all occasions.</p>
+        <div class="price">₹2,199</div>
+        <button class="add-cart" onclick="addToCart('Luxury Perfume', 2199)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg" alt="Travel Backpack">
+    <div class="product-info">
+        <h3>Travel Backpack</h3>
+        <p>Durable backpack with multiple compartments.</p>
+        <div class="price">₹1,999</div>
+        <button class="add-cart" onclick="addToCart('Travel Backpack', 1999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg" alt="Winter Jacket">
+    <div class="product-info">
+        <h3>Nike Cap</h3>
+        <p>Stylish cap for every season.</p>
+        <div class="price">₹4,299</div>
+        <button class="add-cart" onclick="addToCart('Winter Jacket', 4299)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=1200&auto=format&fit=crop" alt="Camera">
+    <div class="product-info">
+        <h3>DSLR Camera</h3>
+        <p>Professional photography camera with 4K video.</p>
+        <div class="price">₹54,999</div>
+        <button class="add-cart" onclick="addToCart('DSLR Camera', 54999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=1200&auto=format&fit=crop" alt="Speaker">
+    <div class="product-info">
+        <h3>Wired Headphones</h3>
+        <p>Portable wired headphones with deep bass.</p>
+        <div class="price">₹2,799</div>
+        <button class="add-cart" onclick="addToCart('Bluetooth Speaker', 2799)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop" alt="Hoodie">
+    <div class="product-info">
+        <h3>Casual T-shirt</h3>
+        <p>Modern T-shit with soft fabric and premium quality.</p>
+        <div class="price">₹1,599</div>
+        <button class="add-cart" onclick="addToCart('Stylish Hoodie', 1599)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1200&auto=format&fit=crop" alt="Keyboard">
+    <div class="product-info">
+        <h3>Makeup Kit</h3>
+        <p>Makup kit with everyday usefull makeup products.</p>
+        <div class="price">₹4,499</div>
+        <button class="add-cart" onclick="addToCart('Mechanical Keyboard', 4499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1200&auto=format&fit=crop" alt="Mouse">
+    <div class="product-info">
+        <h3>Polarized Sunglasses</h3>
+        <p>Stylish sunglasses with UV protection.</p>
+        <div class="price">₹1,299</div>
+        <button class="add-cart" onclick="addToCart('Gaming Mouse', 1299)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=1200&auto=format&fit=crop" alt="Sunglasses">
+    <div class="product-info">
+        <h3>Smart Laptop</h3>
+        <p>Smart laptop with new features and with one year warranty</p>
+        <div class="price">₹1,499</div>
+        <button class="add-cart" onclick="addToCart('Polarized Sunglasses', 1499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1200&auto=format&fit=crop" alt="Bottle">
+    <div class="product-info">
+        <h3>Wireless Headphones</h3>
+        <p>Portable wireless headphones with fast Bluetooth connectivity.</p>
+        <div class="price">₹699</div>
+        <button class="add-cart" onclick="addToCart('Steel Water Bottle', 699)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg" alt="Android Tablet">
+    <div class="product-info">
+        <h3>Android Tablet</h3>
+        <p>Powerful tablet perfect for study and entertainment.</p>
+        <div class="price">₹24,999</div>
+        <button class="add-cart" onclick="addToCart('Android Tablet', 24999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg" alt="Leather Handbag">
+    <div class="product-info">
+        <h3>Leather Handbag</h3>
+        <p>Premium quality handbag with elegant design.</p>
+        <div class="price">₹3,799</div>
+        <button class="add-cart" onclick="addToCart('Leather Handbag', 3799)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=1200&auto=format&fit=crop" alt="Monitor">
+    <div class="product-info">
+        <h3>LED Monitor</h3>
+        <p>27-inch Full HD monitor for work and gaming.</p>
+        <div class="price">₹12,999</div>
+        <button class="add-cart" onclick="addToCart('LED Monitor', 12999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg" alt="Wireless Earbuds">
+    <div class="product-info">
+        <h3>Wireless Earbuds</h3>
+        <p>Compact earbuds with immersive sound quality.</p>
+        <div class="price">₹2,499</div>
+        <button class="add-cart" onclick="addToCart('Wireless Earbuds', 2499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/291759/pexels-photo-291759.jpeg" alt="Designer Dress">
+    <div class="product-info">
+        <h3>Designer Dress</h3>
+        <p>Elegant designer dress for special occasions.</p>
+        <div class="price">₹5,999</div>
+        <button class="add-cart" onclick="addToCart('Designer Dress', 5999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop" alt="Drone">
+    <div class="product-info">
+        <h3>4K Camera</h3>
+        <p>Capture amazing shots with smart controls.</p>
+        <div class="price">₹39,999</div>
+        <button class="add-cart" onclick="addToCart('4K Camera Drone', 39999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=1200&auto=format&fit=crop" alt="Smart LED TV">
+    <div class="product-info">
+        <h3>Smart LED TV</h3>
+        <p>Ultra HD smart television with streaming apps.</p>
+        <div class="price">₹45,999</div>
+        <button class="add-cart" onclick="addToCart('Smart LED TV', 45999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg" alt="Office Chair">
+    <div class="product-info">
+        <h3>Office Chair</h3>
+        <p>Comfortable ergonomic chair for office and gaming.</p>
+        <div class="price">₹8,999</div>
+        <button class="add-cart" onclick="addToCart('Office Chair', 8999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop" alt="laptop">
+    <div class="product-info">
+        <h3>Laptop</h3>
+        <p>Advanced processor laptop for heavy use.</p>
+        <div class="price">₹599</div>
+        <button class="add-cart" onclick="addToCart('Digital Calculator', 599)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg" alt="Coffee Maker">
+    <div class="product-info">
+        <h3>Coffee Maker</h3>
+        <p>Brew fresh coffee instantly with smart controls.</p>
+        <div class="price">₹3,499</div>
+        <button class="add-cart" onclick="addToCart('Coffee Maker', 3499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Study Table">
+    <div class="product-info">
+        <h3>Bedroom Bench</h3>
+        <p>Modern bench for bedroom.</p>
+        <div class="price">₹6,499</div>
+        <button class="add-cart" onclick="addToCart('Study Table', 6499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop" alt="Action Camera">
+    <div class="product-info">
+        <h3>Action Camera</h3>
+        <p>Capture adventures with waterproof 4K recording.</p>
+        <div class="price">₹15,999</div>
+        <button class="add-cart" onclick="addToCart('Action Camera', 15999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=1200&auto=format&fit=crop" alt="Refrigerator">
+    <div class="product-info">
+        <h3>Smart Refrigerator</h3>
+        <p>Energy efficient fridge with smart cooling system.</p>
+        <div class="price">₹55,999</div>
+        <button class="add-cart" onclick="addToCart('Smart Refrigerator', 55999)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.pexels.com/photos/7742584/pexels-photo-7742584.jpeg" alt="Wireless Charger">
+    <div class="product-info">
+        <h3>Wireless Charger</h3>
+        <p>Fast wireless charging pad for smartphones.</p>
+        <div class="price">₹1,499</div>
+        <button class="add-cart" onclick="addToCart('Wireless Charger', 1499)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?q=80&w=1200&auto=format&fit=crop" alt="Electric Kettle">
+    <div class="product-info">
+        <h3>Electric Kettle</h3>
+        <p>Quick boiling kettle with auto shut-off feature.</p>
+        <div class="price">₹1,899</div>
+        <button class="add-cart" onclick="addToCart('Electric Kettle', 1899)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1543512214-318c7553f230?q=80&w=1200&auto=format&fit=crop" alt="Smart Speaker">
+    <div class="product-info">
+        <h3>Smart Home Speaker</h3>
+        <p>Voice assistant speaker with immersive sound.</p>
+        <div class="price">₹4,999</div>
+        <button class="add-cart" onclick="addToCart('Smart Home Speaker', 4999)">Add to Cart</button>
+    </div>
+</div>
+
+</section>
+<h2 class="section-title" id="features">Why Choose Us?</h2>
+
+<section class="features">
+    <div class="feature-box">
+        <h3>🚚 Fast Delivery</h3>
+        <p>Quick and safe product delivery all over India.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>💳 Secure Payments</h3>
+        <p>100% secure payment gateway with encryption.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>⭐ Premium Quality</h3>
+        <p>Top quality products from trusted brands.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>📞 24/7 Support</h3>
+        <p>Customer support available anytime for help.</p>
+    </div>
+    </section>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="total">Total: ₹<span id="total-price">0</span></div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        <div id="btn">
+            <a href="" id="btn-prop"><button id="Backbtn">Back</button></a>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <h2>ShopSphere</h2>
+        <p>Email: support@shopsphere.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>© 2026 ShopSphere. All Rights Reserved.</p>
+    </footer>
+
+<script src="xapp.js"></script>
+</body>
+</html>
